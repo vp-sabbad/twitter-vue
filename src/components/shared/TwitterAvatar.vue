@@ -1,22 +1,24 @@
-<template>
-  <div class="twitter-avatar">
-    <img :src="src" width="34" height="34">
-  </div>
-</template>
-
 <script>
 export default {
   name: 'twitter-avatar',
+  functional: true,
   props: {
     src: {
       type: String,
       required: true
     }
+  },
+  render (h, {props}) {
+    return (
+      <div class={{'twitter-avatar': true}}>
+        <img src={props.src} width="34" height="34"/>
+      </div>
+    )
   }
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .twitter-avatar
   float: left
   img

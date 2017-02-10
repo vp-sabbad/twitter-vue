@@ -12,7 +12,7 @@
 
 <script>
 import {mapState, mapGetters, mapActions} from 'vuex'
-import TweetCard from '../components/tweet/TweetCard'
+import TweetCard from '../components/tweet-card/TweetCard'
 
 export default {
   name: 'tweet-page',
