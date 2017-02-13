@@ -1,14 +1,23 @@
-<template>
-  <div class="card-footer no-border">
-    <a href="#" class="link">Like</a>
-    <a href="#" class="link">Comment</a>
-    <a href="#" class="link">Share</a>
-    <a v-show="showPreviousTweet" href="#" class="link" @click="handlePrevious">Prev</a>
-    <a v-show="showNextTweet" href="#" class="link" @click="handleNext">Next</a>
-  </div>
+<template lang="pug">
+  div.card-footer.no-border
+    a.link(href="#") Like
+    a.link(href="#") Comment
+    a.link(href="#") Share
+    a.link(
+      href="#"
+      v:show="showPreviousTweet"
+      "@click"="handlePrevious"
+    ) Previous
+    a.link(
+      href="#"
+      v:show="showNextTweet"
+      "@click"="handleNext"
+    ) Next
 </template>
 
 <script>
+import {mapEmitters} from '../../utils/vue-utils'
+
 export default {
   name: 'tweet-card-footer',
   props: {
@@ -26,12 +35,10 @@ export default {
     }
   },
   methods: {
-    handleNext () {
-      this.$emit('next')
-    },
-    handlePrevious () {
-      this.$emit('previous')
-    }
+    ...mapEmitters({
+      handlePrevious: 'previous',
+      handleNext: 'next'
+    })
   }
 }
 </script>

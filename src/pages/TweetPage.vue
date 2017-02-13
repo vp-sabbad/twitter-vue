@@ -1,13 +1,12 @@
-<template>
-  <f7-page>
-    <tweet-card
-      :tweet="tweet"
-      :show-previous-tweet="hasPreviousTweet"
-      :show-next-tweet="hasNextTweet"
-      @next-tweet="handleNextTweet"
-      @previous-tweet="handlePreviousTweet"
-    />
-  </f7-page>
+<template lang="pug">
+  f7-page
+    tweet-card(
+      ":tweet"="tweet"
+      ":show-previous-tweet"="hasPreviousTweet"
+      ":show-next-tweet"="hasNextTweet"
+      "@next-tweet"="handleNextTweet"
+      "@previous-tweet"="handlePreviousTweet"
+    )
 </template>
 
 <script>

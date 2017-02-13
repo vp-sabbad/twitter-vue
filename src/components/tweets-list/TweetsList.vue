@@ -1,16 +1,14 @@
-<template>
-  <f7-list media-list class="tweets">
-    <f7-list-item
-      v-for="tweet of tweets"
-      :title="tweet.user.name"
-      :subtitle="tweet.user | screenName"
-      :text="tweet.text"
-      :link="tweet | tweetLink"
-      @click="handleClick(tweet)"
-    >
-      <img slot="media" :src="tweet.user.profile_image_url">
-    </f7-list-item>
-  </f7-list>
+<template lang="pug">
+  f7-list.tweets(media-list)
+    f7-list-item(
+        v-for="tweet of tweets"
+        ":title"="tweet.user.name"
+        ":subtitle"="tweet.user | screenName"
+        ":text"="tweet.text"
+        ":link"="tweet | tweetLink"
+        "@click"="handleClick(tweet)"
+      )
+      img(slot="media", ":src"="tweet.user.profile_image_url")
 </template>
 
 <script>

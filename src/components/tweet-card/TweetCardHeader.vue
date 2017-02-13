@@ -1,9 +1,8 @@
-<template>
-  <div class="card-header">
-    <twitter-avatar :src="tweet.user.profile_image_url"/>
-    <div class="twitter-name">{{tweet.user.name}}</div>
-    <div class="twitter-date">{{tweet.created_at | from}}</div>
-  </div>
+<template lang="pug">
+  div.card-header
+    twitter-avatar(":src"="tweet.user.profile_image_url")
+    div.twitter-name {{tweet.user.name}}
+    div.twitter-date {{tweet.created_at | from}}
 </template>
 
 <script>

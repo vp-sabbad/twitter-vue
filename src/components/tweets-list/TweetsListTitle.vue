@@ -1,18 +1,14 @@
-<template>
-  <div>
-    <f7-block-title>
-      <span v-show="loading">Loading tweets for "{{query}}"</span>
-      <span v-show="!loading && query">Tweets for {{query}}</span>
-      <span v-show="!loading &&!query">Please enter a search term</span>
-    </f7-block-title>
-    <div v-show="loading" class="row no-gutter">
-     <div class="col-auto"></div>
-     <div v-show="loading" class="content-block row">
-       <loader/>
-     </div>
-    <div class="col-auto"></div>
-    </div>
-  </div>
+<template lang="pug">
+  div
+    f7-block-title
+      span(v-show="loading") Loading tweets for "{{query}}"
+      span(v-show="!loading && query") Tweets for "{{query}}"
+      span(v-show="!loading && !query") Please enter a search term
+    div.row.no-gutter(v-show="loading")
+      div.col-auto
+      div.content-block.row(v-show="loading")
+        loader
+      div.col-auto
 </template>
 
 <script>

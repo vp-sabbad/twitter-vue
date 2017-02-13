@@ -1,9 +1,8 @@
-<template>
-  <f7-page>
-    <search-bar @search="handleSearch" />
-    <tweets-list-title :loading="loading" :query="query"/>
-    <tweets-list v-show="!loading" :tweets="tweets" @tweet-click="handleTweetClick"/>
-  </f7-page>
+<template lang="pug">
+  f7-page
+    search-bar("@search"="handleSearch")
+    tweets-list-title(":loading"="loading", ":query"="query")
+    tweets-list(v-show="!loading", ":tweets"="tweets", "@tweet-click"="handleTweetClick")
 </template>
 
 <script>
@@ -23,12 +22,8 @@ export default {
     ...mapState(['tweets', 'loading', 'query'])
   },
   methods: {
-    ...mapActions({
-      handleSearch: 'search'
-    }),
-    ...mapMutations({
-      handleTweetClick: 'setTweet'
-    })
+    ...mapActions({handleSearch: 'search'}),
+    ...mapMutations({handleTweetClick: 'setTweet'})
   }
 }
 </script>

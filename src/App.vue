@@ -1,17 +1,14 @@
-<template>
-  <f7-views navbar-fixed>
-    <f7-view main>
-      <f7-navbar
+<template lang="pug">
+  f7-views(navbar-fixed)
+    f7-view(main)
+      f7-navbar(
         title="TwitterVue"
-        :back-link="true"
-        :theme="theme"
-        sliding>
-      </f7-navbar>
-      <f7-pages>
-        <tweet-list-page></tweet-list-page>
-      </f7-page>
-    </f7-view>
-  </f7-views>
+        ":back-link"="true"
+        ":theme"="theme"
+        sliding
+      )
+      f7-pages
+        tweet-list-page
 </template>
 
 <script>

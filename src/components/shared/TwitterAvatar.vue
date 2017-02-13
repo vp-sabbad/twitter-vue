@@ -9,9 +9,10 @@ export default {
     }
   },
   render (h, {props}) {
+    const {src} = props
     return (
       <div class={{'twitter-avatar': true}}>
-        <img src={props.src} width="34" height="34"/>
+        <img src={src} width="34" height="34"/>
       </div>
     )
   }

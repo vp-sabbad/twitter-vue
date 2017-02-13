@@ -1,15 +1,14 @@
-<template>
-  <div class="card">
-    <tweet-card-header :tweet="tweet"/>
-    <tweet-card-content :tweet="tweet"/>
-    <tweet-card-footer
-      :tweet="tweet"
-      :show-previous-tweet="showPreviousTweet"
-      :show-next-tweet="showNextTweet"
-      @next="handleNext"
-      @previous="handlePrevious"
-    />
-  </div>
+<template lang="pug">
+  div.card
+    tweet-card-header(":tweet"="tweet")
+    tweet-card-content(":tweet"="tweet")
+    tweet-card-footer(
+      ":tweet"="tweet"
+      ":showPreviousTweet"="showPreviousTweet"
+      ":previous"="handlePrevious"
+      ":showNextTweet"="showNextTweet"
+      "@next"="handleNext"
+    )
 </template>
 
 <script>

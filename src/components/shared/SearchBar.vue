@@ -1,13 +1,15 @@
-<template>
-  <f7-searchbar
+<template lang="pug">
+  f7-searchbar(
     cancel-link="Cancel"
     placeholder="Search ..."
-    :clear="true"
-    @change="handleChange"
-  />
+    ":clear"="true"
+    "@change"="handleChange"
+  )
 </template>
 
 <script>
+import {mapEmitters} from '../../utils/vue-utils'
+
 export default {
   name: 'search-bar',
   props: {
@@ -17,9 +19,9 @@ export default {
     }
   },
   methods: {
-    handleChange (evt) {
-      this.$emit('search', evt.target.value)
-    }
+    ...mapEmitters({
+      'handleChange': 'search'
+    })
   }
 }
 </script>
