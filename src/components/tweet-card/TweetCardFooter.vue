@@ -4,14 +4,14 @@
     a.link(href="#") Comment
     a.link(href="#") Share
     a.link(
-      href="#"
-      v:show="showPreviousTweet"
-      "@click"="handlePrevious"
+      href="#",
+      v:show="showPreviousTweet",
+      @click="handlePrevious"
     ) Previous
     a.link(
-      href="#"
-      v:show="showNextTweet"
-      "@click"="handleNext"
+      href="#",
+      v:show="showNextTweet",
+      @click="handleNext"
     ) Next
 </template>
 

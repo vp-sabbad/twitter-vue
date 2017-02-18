@@ -3,11 +3,11 @@
     tweet-card-header(":tweet"="tweet")
     tweet-card-content(":tweet"="tweet")
     tweet-card-footer(
-      ":tweet"="tweet"
-      ":showPreviousTweet"="showPreviousTweet"
-      ":previous"="handlePrevious"
-      ":showNextTweet"="showNextTweet"
-      "@next"="handleNext"
+      :tweet="tweet",
+      :showPreviousTweet="showPreviousTweet",
+      @previous="handlePrevious",
+      :showNextTweet="showNextTweet",
+      @next="handleNext"
     )
 </template>
 

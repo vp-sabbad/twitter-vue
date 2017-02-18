@@ -1,6 +1,6 @@
 <template lang="pug">
   div.card-header
-    twitter-avatar(":src"="tweet.user.profile_image_url")
+    twitter-avatar(:src="tweet.user.profile_image_url")
     div.twitter-name {{tweet.user.name}}
     div.twitter-date {{tweet.created_at | from}}
 </template>

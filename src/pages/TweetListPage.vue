@@ -1,8 +1,8 @@
 <template lang="pug">
   f7-page
-    search-bar("@search"="handleSearch")
-    tweets-list-title(":loading"="loading", ":query"="query")
-    tweets-list(v-show="!loading", ":tweets"="tweets", "@tweet-click"="handleTweetClick")
+    search-bar(@search="handleSearch")
+    tweets-list-title(:loading="loading", :query="query")
+    tweets-list(v-show="!loading", :tweets="tweets", @tweet-click="handleTweetClick")
 </template>
 
 <script>

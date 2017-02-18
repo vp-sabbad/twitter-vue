@@ -6,7 +6,6 @@ export default new vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
     tweetIndex: -1,
-    theme: '',
     tweets: [],
     tweet: null,
     query: '',
